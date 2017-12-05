@@ -5,6 +5,7 @@ Go programming language learn tips.
 * https://gobyexample.com
 
 ## Go echo server
+* http://blog.csdn.net/d_guco/article/details/75150696
 * http://blog.leanote.com/post/ljie-pi/goroutine-%E5%92%8C-go-channel-%E7%AE%80%E6%98%93%E5%AE%9E%E7%8E%B0
 * https://groups.google.com/forum/#!topic/golang-china/q4pFH-AGnfs
 ```go
