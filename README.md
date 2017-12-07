@@ -8,8 +8,8 @@ Go programming language learn tips.
 * Go语言中的异步式的echo server是非常简洁的。参见repo中的echo.go. 它利用Go语言的特性，用Channel和Go Routine做并发编程，在加上netpoller，负责监听网络上的IO事件。
 * 在Liunx上, 执行命令 `go run echo.go`，用`telnet 127.0.0.1 8888`去连接server, 发一些消息。
 * 如何看出在Linux上`go run echo.go`其实是使用了epoll的。 
-    * `ps -L -p <EchoServerPid>` #找出所有LWP
-    * `strace -p <LWP_PID>` 尝试监视这些LWP调用了哪些系统调用。你会发现epoll相关的系统调用：
+    * `ps -L -p <EchoServerPid>` #找出所有LWP
+    * `strace -p <LWP_PID>` 尝试监视这些LWP调用了哪些系统调用。你会发现epoll相关的系统调用：
     
 ```shell
 stack@ubuntu16-dev:~/go$ sudo strace -p 30412
