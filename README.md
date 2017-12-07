@@ -11,7 +11,7 @@ Go programming language learn tips.
     * `ps -L -p <EchoServerPid>` #找出所有LWP
     * `strace -p <LWP_PID>` 尝试监视这些LWP调用了哪些系统调用。你会发现epoll相关的系统调用：
     
-    ```shell
+```shell
 stack@ubuntu16-dev:~/go$ sudo strace -p 30412
 strace: Process 30412 attached
 epoll_wait(4,[{EPOLLIN, {u32=2678080184, u64=140216180425400}}], 128, -1) = 1
