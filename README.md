@@ -28,7 +28,7 @@ futex(0xc82002a908, FUTEX_WAKE, 1)      = 1
 write(1, "[acceptConns.co] Before Accept()"..., 33) = 33
 accept4(3, 0xc820039b10, 0xc820039b0c, SOCK_CLOEXEC|SOCK_NONBLOCK) = -1 EAGAIN (Resource temporarily unavailable)
 futex(0xc82002b108, FUTEX_WAIT, 0, NULL
-    ```
+```
     
 * http://blog.csdn.net/d_guco/article/details/75150696
 * http://blog.leanote.com/post/ljie-pi/goroutine-%E5%92%8C-go-channel-%E7%AE%80%E6%98%93%E5%AE%9E%E7%8E%B0
