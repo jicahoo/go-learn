@@ -10,13 +10,11 @@ Go programming language learn tips.
 * 如何看出在Linux上`go run echo.go`其实是使用了epoll的。 
     * `ps -L -p <EchoServerPid>` #找出所有LWP
     * `strace -p <LWP_PID>` 尝试监视这些LWP调用了哪些系统调用。你会发现epoll相关的系统调用：
+    
     ```shell
 stack@ubuntu16-dev:~/go$ sudo strace -p 30412
 strace: Process 30412 attached
-epoll_wait(4,
-
-
-[{EPOLLIN, {u32=2678080184, u64=140216180425400}}], 128, -1) = 1
+epoll_wait(4,[{EPOLLIN, {u32=2678080184, u64=140216180425400}}], 128, -1) = 1
 clock_gettime(CLOCK_MONOTONIC, {1331012, 46757911}) = 0
 futex(0x65fe90, FUTEX_WAKE, 1)          = 1
 futex(0x65fdd0, FUTEX_WAKE, 1)          = 1
@@ -30,8 +28,8 @@ futex(0xc82002a908, FUTEX_WAKE, 1)      = 1
 write(1, "[acceptConns.co] Before Accept()"..., 33) = 33
 accept4(3, 0xc820039b10, 0xc820039b0c, SOCK_CLOEXEC|SOCK_NONBLOCK) = -1 EAGAIN (Resource temporarily unavailable)
 futex(0xc82002b108, FUTEX_WAIT, 0, NULL
-
     ```
+    
 * http://blog.csdn.net/d_guco/article/details/75150696
 * http://blog.leanote.com/post/ljie-pi/goroutine-%E5%92%8C-go-channel-%E7%AE%80%E6%98%93%E5%AE%9E%E7%8E%B0
     * 这个材料使用C语言的ucontext机制实现了类似Go的routine. 
