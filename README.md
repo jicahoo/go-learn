@@ -34,3 +34,4 @@ futex(0xc82002b108, FUTEX_WAIT, 0, NULL
 * http://blog.leanote.com/post/ljie-pi/goroutine-%E5%92%8C-go-channel-%E7%AE%80%E6%98%93%E5%AE%9E%E7%8E%B0
     * 这个材料使用C语言的ucontext机制实现了类似Go的routine. 
 * https://groups.google.com/forum/#!topic/golang-china/q4pFH-AGnfs
+* 实现协程的四种方式: http://www.myexception.org/program/1796620.html
